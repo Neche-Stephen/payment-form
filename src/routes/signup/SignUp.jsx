@@ -219,7 +219,7 @@ useEffect(() =>{
             <Row className={`${styles.signup_form_row}`}>
                 <form className={`${styles.signup_form} col`} onSubmit={handleSubmit}>
                 
-                    <Row><Col xs="11" lg ="10"><h1>Create New Account</h1></Col></Row>
+                    <Row><Col xs="11" lg ="10"><h1>Payment Form</h1></Col></Row>
                     <Row>
                         <Col xs = '11' lg = '5'>
                             <label htmlFor="fname">First Name<span>*</span></label>
@@ -776,7 +776,7 @@ useEffect(() =>{
                             <button>
                                 {
                                 signupLoading ? <Spinner animation="border" variant="warning" /> :
-                                "Sign Up"
+                                "Make payment"
                                 }
                             </button>
                         </Col>
