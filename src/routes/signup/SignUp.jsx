@@ -94,22 +94,6 @@ export default function SignUp() {
     
     const handleSubmit = (e)=> {
       e.preventDefault();
-      console.log('submittng');
-      
-
-        // handleFlutterPayment({
-        //   callback: (response) => {
-        //      console.log(response);
-        //       closePaymentModal() // this will close the modal programmatically
-        //       // navigate("/user/dashboard");
-        //   },
-        //   onClose: () => {
-        //       //  navigate("/user/dashboard");
-        //   },
-        // });
-
-
-        e.preventDefault();
         setSignupLoading(true);
         setBtnDisabledState(true);
         setErrorMessageSentence([]);
@@ -160,79 +144,16 @@ export default function SignUp() {
              console.log(response);
               closePaymentModal() // this will close the modal programmatically
               // navigate("/user/dashboard");
+              setSignupLoading(false);
+              setBtnDisabledState(false);
           },
           onClose: () => {
               //  navigate("/user/dashboard");
+              setSignupLoading(false);
+              setBtnDisabledState(false);
           },
         });
-           
-        // axios.post(api + 'user-reg', {
-        //     'firstname': `${fname}`,
-        //     'lastname': `${lname}`,
-        //     'gender': `${gender}`,
-        //     'email': `${email}`,
-        //     'phone': `${country_code + phone}`,
-        //     'password': `${password}`,
-        //     'address': `${address}`,
-        //     'age': `${age}`,
-        //     'occupation': `${occupation}`,
-        //     'nationality' : `${nationality}`,
-        //     'state' : `${state}`
-        // })
-        // .then(function (response) {
-        //     // setLoading(false)
-        //     sessionStorage.setItem("Token", `${response.data.data.token}`);
-        //     // console.log(response.data);
-        //     setSignupLoading(false);
-        //     setBtnDisabledState(false);
-        //     // navigate("/user/dashboard");
-        //     console.log('successful')
-        //     handleFlutterPayment({
-        //         callback: (response) => {
-        //            console.log(response);
-        //             closePaymentModal() // this will close the modal programmatically
-        //             navigate("/user/dashboard");
-        //         },
-        //         onClose: () => {
-        //              navigate("/user/dashboard");
-        //         },
-        //       });
-        // })
-        // .catch(function (error) {
-        //     // alert(error, error.response);
-        //     if (error.response){
-        //     //   setLoading(false)
-        //     console.log(1, error.response.data);
-        //     console.log(2, error.response.data.message);
-        //     //   setSuccess(error.response.data.success)
-        //     //   setErrorMessage(error.response.data.message);
-        //     setSignupLoading(false);
-        //     setBtnDisabledState(false);
-        //     const sentences = error.response.data.message.split('.\n').filter(sentence => sentence.trim() !== '');
-        //     setErrorMessageSentence(sentences);
-        //     console.log(sentences);
-        //     }
-        //     else{
-        //     //   setLoading(false)
-        //     //   setSuccess(false)
-        //     //   setNetwork( network = 'Encountered an error, Please try again')
-        //     console.log('error');
-        //     if (error.message === 'Network Error')
-        //       {
-        //         setErrorMessageSentence(['There is a problem with your internet connection'])
-        //         setSignupLoading(false);
-        //         setBtnDisabledState(false);
-        //       }
-        //       else{
-        //         setErrorMessageSentence([error.message])
-        //         setSignupLoading(false);
-        //         setBtnDisabledState(false);
-        //       }
-             
-        //     }
-            
-        // });
-        
+    
     }
 
 useEffect(() =>{
@@ -852,7 +773,7 @@ useEffect(() =>{
                     </Row>
                     
                     <Row>
-                        <Col xs ="11" lg = "8">
+                        <Col xs ="11" lg = "4">
                             <button>
                                 {
                                 signupLoading ? <Spinner animation="border" variant="warning" /> :
