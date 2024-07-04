@@ -1,0 +1,49 @@
+.nav_Logo{
+    /* width: 50% !important; */
+}
+
+.nav_logo_img{
+    width: 135px !important;
+}
+@media(max-width:767px){
+    .nav_logo_img{
+        width: 105px !important;
+    }
+}
+.nav_links{
+    gap: 20px;
+}
+.nav_Link{
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: -0.02em;
+    /* width: 117px !important; */
+    /* width: 15% !important; */
+    color: #660066;
+
+}
+
+.nav_Link a{
+    text-decoration: none;
+    color: #660066;
+    cursor: pointer;
+}
+.nav_button{
+    font-weight: 900;
+    line-height: 29px;
+    text-decoration: none;
+    border-radius: 12px;
+    /* padding: 2px; */
+    background: #FF6600;
+    text-align: center;
+    /* width: 132px; */
+    /* width: 10% !important; */
+    color: #fff;
+
+}
+
+.nav_menu{
+    all: unset;
+}
