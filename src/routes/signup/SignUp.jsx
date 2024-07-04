@@ -34,8 +34,7 @@ const defaultUserDetails = {
 
 export default function SignUp() {
     const apiKey = process.env.REACT_APP_FLUTTER_API_KEY
-    // const api = import.meta.env.VITE_APP_API_URL
-    // const apiKey = VITE_APP_FLUTTER_API_KEY;
+
     
     const [showMobileNav, setShowMobileNav] = React.useState(false);
     const [signupBtnLoading, setSignUpBtnLoading] = useState(false);
